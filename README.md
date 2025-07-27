@@ -1,7 +1,7 @@
 ###  BorderCollie: AI-Powered Furry Gathering Aggregation System  
 **Developed by Shoutime BBS | Powered by DeepSeek & AMap**  
 [![SI Logo](https://media.shoutime.cn/more/SIlogo.png)](https://api.shoutime.net/BorderCollie)
-
+Project Video: https://www.bilibili.com/video/BV1quRaYbENC
 ---
 
 #### 🌟 Project Overview  
@@ -123,6 +123,7 @@ $dbname = "";     // DB name
 ---
 **由兽时社区（Shoutime BBS）开发 | 基于 DeepSeek 、高德地图**  
 [![SI Logo](https://media.shoutime.cn/more/SIlogo.png)](https://api.shoutime.net/BorderCollie)
+使用视频: https://www.bilibili.com/video/BV1quRaYbENC
 #### 项目简介  
 **BorderCollie** 是一款专为Furry社群设计的开源兽聚聚合系统。它基于 DeepSeek 技术构建，通过智能整合地理位置与兽聚数据库，帮助Furry们快速发现并参与周边的线下兽聚活动，解决传统平台面对海量数据时的效率瓶颈。
 #### 核心功能  
