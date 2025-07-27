@@ -1,4 +1,126 @@
+###  BorderCollie: AI-Powered Furry Gathering Aggregation System  
+**Developed by Shoutime BBS | Powered by DeepSeek & AMap**  
+[![SI Logo](https://media.shoutime.cn/more/SIlogo.png)](https://api.shoutime.net/BorderCollie)
+
+---
+
+#### 🌟 Project Overview  
+**BorderCollie** is an open-source furry gathering aggregation system designed for the furry community. Built on DeepSeek technology, it intelligently integrates geolocation data with event databases to help furries quickly discover and participate in nearby offline gatherings, solving traditional platforms' efficiency bottlenecks when handling massive data.
+
+---
+
+#### 🔍 Core Features  
+- **Precision Location Discovery**  
+  Uses AMap to obtain user locations, automatically scans for nearby furry gatherings, and visually presents event details  
+- **Efficient Data Integration**  
+  Proprietary distributed processing logic overcomes DeepSeek's data limitations in big-data scenarios while conserving tokens  
+- **User-Friendly Experience**  
+  Clean interface + multi-dimensional info display (time/location/event type) + conversational output  
+
+---
+
+#### ⚙️ Tech Stack  
+```bash
+Core Language: PHP  
+Runtime Environment: PHP8.1 + MySQL5.7.44 + Apache2.4.62
+(Versions used in community deployment - reference only)  
+```
+
+---
+
+#### 🚀 Deployment  
+```bash
+git clone [repo] → Place BorderCollie contents in root directory
+Configure PHP+MySQL → Import database → Launch service
+Modify the following:
+```
+
+1. In `index.php`:
+```php
+src="https://webapi.amap.com/maps?v=1.4.15&key=YOUR_AMAP_API_KEY&plugin=AMap.Geolocation,AMap.Geocoder">
+```
+```php
+window._AMapSecurityConfig = {
+    securityJsCode: "YOUR_AMAP_SECURITY_CODE" 
+};
+```
+
+2. In `message.php`:
+```php
+$servername = "";
+$username = "";  // DB username
+$password = "";  // DB password
+$dbname = "";    // DB name
+```
+> *Logs user outputs/IPs for monitoring, error tracking, and abuse prevention*
+
+3. In `getCity.php`:
+```php
+$servername = ""; // DB server
+$username = "";   // DB username
+$password = "";   // DB password
+$dbname = "";     // DB name
+```
+
+4. In `city.php`:
+```php
+$apiKey = 'YOUR_DEEPSEEK_API'; 
+```
+
+5. In `getLocation.php`:
+```php
+<script src="https://webapi.amap.com/maps?v=1.4.15&key=YOUR_AMAP_API&plugin=AMap.Geolocation,AMap.Geocoder"></script>
+```
+```php
+window._AMapSecurityConfig = {
+    securityJsCode: "YOUR_AMAP_SECURITY_CODE" 
+};
+```
+
+6. In `output.php`:
+```php
+$apiKey = 'YOUR_DEEPSEEK_API'; 
+```
+Modify prompt to:
+```php
+"Use <p> for paragraphs, <strong> for emphasis, HTML/CSS for coloring/styling, <br> for line breaks. Add hyperlinks to gathering names: 'https://yourdomain.com/events/' + id with target='_blank'"
+```
+
+7. In `getInfo.php`:
+```php
+$servername = ""; // DB server
+$username = "";   // DB username
+$password = "";   // DB password
+$dbname = "";     // DB name
+```
+
+8. Update BeastTime-related references in `index.php`
+
+---
+
+#### 🌐 Direct Access  
+[Live Demo](https://bc.shoutime.net)  
+(Real-time sync with BeastTime Community gathering database)
+
+---
+
+#### 🌍 Open-Source Vision  
+> BeastTime invites organizations/individuals with furry gathering data to integrate with this system, building the **world's most comprehensive furry event network**. Through open-source, we ensure every gathering is discoverable.
+
+---
+
+### 📜 Copyright Statement  
+© 2025 Shoutime.net | Apache 2.0 License  
+**Brand assets (BorderCollie/SIlogo) remain proprietary** - compliant use/derivative works welcome!
+
+
+
+---
+---
+
+
 ###  BorderCollie 人工智能兽聚聚合系统
+---
 **由兽时社区（Shoutime BBS）开发 | 基于 DeepSeek 、高德地图**  
 [![SI Logo](https://media.shoutime.cn/more/SIlogo.png)](https://api.shoutime.net/BorderCollie)
 #### 项目简介  
@@ -10,12 +132,18 @@
   独创的分布式处理逻辑，突破 DeepSeek 在大数据场景下的数据限制同时可以节省token
 - **人性化体验**  
   简洁美观的界面 + 多维度信息展示（时间/地点/活动类型）+ 沟通的方式输出信息
+
+  
+  ---
+  
 #### ⚙️ 系统  
 ```bash
 核心语言：PHP  
 运行环境：PHP8.1 + MySQL5.7.44 + Apache2.4.62
 （社区部署使用的版本，供参考，不强制）  
 ```
+---
+
 #### 🚀 部署  
    git clone [项目仓库]，将BorderCollie文件夹的内容放在根目录
    配置 PHP+MySQL 环境 → 导入数据库 → 启动服务
@@ -80,11 +208,18 @@ $dbname = ""; // 数据库名
 7.修改index.php中的其他与兽时社区相关的信息
    
 
-2. **直接体验**  
+**直接体验**  
    [点击进入在线版](https://bc.shoutime.net)  
    （实时同步兽时社区官方兽聚数据库）
+   
+   ---
+   
 #### 开源愿景  
 > 兽时社区诚邀拥有兽聚数据的组织/个人接入此系统，共同打造**全球最全面的兽聚信息网络**。通过开源，让每一场兽聚都能被精准发现。
+
+---
+
 ### 版权声明  
 © 2025 Shoutime.net | Apache 2.0 开源协议  
 **我们保留品牌标识（BorderCollie/SIlogo）的所有权**，欢迎合规使用与二次开发！
+
